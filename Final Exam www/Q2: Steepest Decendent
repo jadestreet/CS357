@@ -1,1 +1,26 @@
+#Step1: get binary representation
+#change
+float_to_convert = "4.5"   #9.0!!! 加 "."
+#change end
 
+# Python program to convert float
+# decimal to binary number 
+def float_bin(number, places):
+    whole, dec = str(number).split(".")
+    whole = int(whole)
+    dec = "0." + dec
+    res = bin(whole).lstrip("0b") + "."
+    for x in range(places):
+        whole, dec = str(float(dec) * 2).split(".")
+        dec = "0." + (dec)
+        res += whole
+    return res
+num_of_s = 20 #小数点后保留
+binary_rep_of_float_to_conver = float_bin(float_to_convert,num_of_s)
+binary_rep_of_float_to_conver
+
+
+
+
+
+//
