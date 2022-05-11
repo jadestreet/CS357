@@ -1,0 +1,21 @@
+import numpy as np
+import numpy.linalg as la
+import math
+from math import e
+
+x = np.array([i for i in range(len(population))])
+y = population.copy()
+
+y = np.log(y)
+A = np.vstack([np.ones(len(x)), x]).T
+d = np.linalg.lstsq(A,y,rcond=None)[0]
+c0 = e**d[0]
+c1 = d[1]
+
+
+
+
+
+
+
+//
